@@ -15,7 +15,6 @@ function HomeScreen({ navigation }) {
                 <Text style={style.dashboardOptions}>Report</Text>
                 <Text style={style.dashboardOptions}>Set screen time</Text>
                 <Text style={style.dashboardOptions}>QR code</Text>
-                <UserNavbar />
             </View>
 
         </SafeAreaView>

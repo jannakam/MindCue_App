@@ -20,15 +20,9 @@ const Tab = createBottomTabNavigator();
 // this is where we add our screens to the navbar
 function UserNavbar() {
     return (
-        <NavigationContainer>
             <Tab.Navigator>
-                <Tab.Screen name='Home' component={HomeScreen} options ={{
-                    tabBarIcon: ({ color, size }) => (<Icon name='home' color={DC989A} size={20}/>
-                    ),
-                }}
-            />
+                <Tab.Screen name='Home' component={HomeScreen} />
             </Tab.Navigator>
-        </NavigationContainer>
       );
 }
 
