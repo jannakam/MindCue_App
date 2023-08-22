@@ -7,6 +7,10 @@ import HomeScreen from './screens/HomeScreen';
 import UserVerification from './screens/UserVerification';
 import SignInScreen from './screens/SignInScreen';
 import SignUpScreen from './screens/SignUpScreen';
+import TriggerScreen from './screens/TriggerScreen';
+import ReportScreen from './screens/ReportScreen';
+import QRScreen from './screens/QRScreen';
+import ScreenTimeScreen from './screens/ScreenTimeScreen';
 import style from './components/style';
 
 // This should be the background image for the sign in page
@@ -24,6 +28,10 @@ function App() {
           <Stack.Screen name='Sign Up' component={SignUpScreen} />
           <Stack.Screen name='User Verification' component={UserVerification} />
           <Stack.Screen name='Home Screen' component={HomeScreen} />
+          <Stack.Screen name='List of triggers' component={TriggerScreen} />
+          <Stack.Screen name='Report' component={ReportScreen} />
+          <Stack.Screen name='Set Screen Time' component={ScreenTimeScreen} />
+          <Stack.Screen name='QR Code' component={QRScreen} />
         </Stack.Navigator>
       </NavigationContainer>
   );
