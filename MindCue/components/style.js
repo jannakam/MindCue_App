@@ -140,6 +140,33 @@ const style = StyleSheet.create({
     fontSize: 18,
     paddingBottom: 10,
   },
+  triggers : {
+    borderColor: '#D2E5E7',
+    borderWidth: 5,
+    justifyContent: 'center',
+    alignContent: 'center',
+    width: 190,
+    borderRadius: 20,
+    gap: 15,
+    paddingBottom: 30,
+    width: 330,
+    alignItems: 'center',
+    marginLeft: 30,
+    top: 100,
+  },
+  triggersTitle : {
+    backgroundColor: '#D2E5E7',
+    color: '#638184',
+    fontSize: 35,
+    padding: 10,
+    width: 320,
+    textAlign: 'center',
+    borderTopEndRadius: 20,
+  },
+  triggerOptions : {
+    color: '638184',
+    
+  },
 });
 
 export default style;
