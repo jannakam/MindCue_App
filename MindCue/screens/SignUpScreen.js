@@ -18,11 +18,20 @@ function SignUpScreen({ navigation }) {
       <TextInput style={style.textbox} placeholder='Email Address'></TextInput>
       <TextInput style={style.textbox} placeholder='Password'></TextInput>
       <TextInput style={style.textbox} placeholder='Confirm Password'></TextInput>
-      <Text>What kind of user are you?</Text>
+      <Text style={style.signInText}>What kind of user are you?</Text>
       <View style={style.box3}>
+      <View style={style.userTypeContainer}>
       <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I am a patient with a doctor' status={checked === 'first' ? 'checked' : 'unchecked'} onPress={() => setChecked('first')} />
+      <Text>I am a patient with a doctor</Text>
+      </View>
+      <View style={style.userTypeContainer}>
       <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I do not currently see a doctor' status={checked === 'second' ? 'checked' : 'unchecked'} onPress={() => setChecked('second')} />
+      <Text>I do not currently see a doctor</Text>
+      </View>
+      <View style={style.userTypeContainer}>
       <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I am a licensed mental health professional' status={checked === 'third' ? 'checked' : 'unchecked'} onPress={() => setChecked('third')} />
+      <Text>I am a licensed mental health professional</Text>
+      </View>
       </View>
       <Button style={style.button1} title='Sign Up' onPress={() => navigation.navigate('User Verification')} />
       </View>

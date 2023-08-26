@@ -28,7 +28,7 @@ function UserVerification({ navigation }) {
       <SafeAreaView>
         <View style={style.box2}>
           <Text style={style.userTitle}>Hello User!</Text>
-          <Text style={style.generalText}>Please enter verification code</Text>
+          <Text style={style.generalText}>Please enter verification code:</Text>
           <TextInput style={style.numberInput} keyboardType='numeric' onChangeText={text => onChanged(text)} value={number} maxLength={4} />
           <Button style={style.button1} title='Submit' onPress={() => navigation.navigate('Home Screen')}/>
         </View>

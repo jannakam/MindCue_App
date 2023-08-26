@@ -33,19 +33,19 @@ function TriggerScreen({ navigation }) {
                 <Text style={style.triggersTitle}>Triggers List</Text>
                 <View style={style.checkboxContainer}>
                 <Checkbox color='#DC989A' uncheckedColor='#638184' label='War' status={war ? 'checked' : 'unchecked'} onPress={() => {setWar(!war);}}/>
-                <Text>War</Text>
+                <Text style={style.triggerOptions}>War</Text>
                 </View>
                 <View style={style.checkboxContainer}>
                 <Checkbox color='#DC989A' uncheckedColor='#638184' label='Child Abuse' status={childAbuse ? 'checked' : 'unchecked'} onPress={() => {setChildAbuse(!childAbuse);}}/>
-                <Text>Child Abuse</Text>
+                <Text style={style.triggerOptions}>Child Abuse</Text>
                 </View>
                 <View style={style.checkboxContainer}>
                 <Checkbox color='#DC989A' uncheckedColor='#638184' label='Gore' status={gore ? 'checked' : 'unchecked'} onPress={() => {setGore(!gore);}}/>
-                <Text>Gore</Text>
+                <Text style={style.triggerOptions}>Gore</Text>
                 </View>
                 <View style={style.checkboxContainer}>
                 <Checkbox color='#DC989A' uncheckedColor='#638184' label='Death' status={death ? 'checked' : 'unchecked'} onPress={() => {setDeath(!death);}}/>
-                <Text>Death</Text>
+                <Text style={style.triggerOptions}>Death</Text>
                 </View>
                 {/* <SearchBar placeholder='Search for a trigger' onChangeText={onChangeSearch} value={searchQuery}/> */}
             </View>
