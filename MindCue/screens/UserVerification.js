@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, SafeAreaView, Button} from 'react-native';
+import { Text, View, SafeAreaView, Button, ImageBackground} from 'react-native';
 import { TextInput } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -26,7 +26,8 @@ function UserVerification({ navigation }) {
   }
     return (
       <SafeAreaView>
-        <View style={style.box2}>
+        <ImageBackground source={require('../assets/images/Rectangle24.png')} style={style.bgImage3}/>
+        <View style={style.box4}>
           <Text style={style.userTitle}>Hello User!</Text>
           <Text style={style.generalText}>Please enter verification code:</Text>
           <TextInput style={style.numberInput} keyboardType='numeric' onChangeText={text => onChanged(text)} value={number} maxLength={4} />

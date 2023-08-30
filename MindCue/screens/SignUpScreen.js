@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, SafeAreaView, Button} from 'react-native';
+import { Text, View, SafeAreaView, Button, ImageBackground} from 'react-native';
 import { TextInput, RadioButton } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -12,6 +12,7 @@ function SignUpScreen({ navigation }) {
     return(
     <SafeAreaView>
     <View>
+    <ImageBackground source={require('../assets/images/Rectangle23.png')} style={style.bgImage2}/>
       <Text style={style.registerTitle}>Create Account</Text>
       <View style={style.box2}>
       <TextInput style={style.textbox} placeholder='Name'></TextInput>
@@ -33,7 +34,7 @@ function SignUpScreen({ navigation }) {
       <Text>I am a licensed mental health professional</Text>
       </View>
       </View>
-      <Button style={style.button1} title='Sign Up' onPress={() => navigation.navigate('User Verification')} />
+      <Button style={style.button1} title='Sign Up' onPress={() => navigation.navigate('UserVerification')} />
       </View>
     </View>
     </SafeAreaView>

@@ -4,6 +4,7 @@ import React from 'react';
 import { TextInput } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import UserNavbar from '../components/UserNavbar';
 import style from '../components/style';
 
 

@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const style = StyleSheet.create({
   button1: {
-    width: 60.455,
+    width: 100,
     height: 30,
     backgroundColor: 'transparent',
     color: '#638184',
@@ -28,8 +28,9 @@ const style = StyleSheet.create({
     height: 100,
     flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: 'center',
     gap: 10,
-    top: 240,
+    top: 160,
     marginLeft: 100,
   },
   box2: {
@@ -38,7 +39,7 @@ const style = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     gap: 10,
-    top: 140,
+    top: 50,
     marginLeft: 100,
   },
   box3 : {
@@ -46,6 +47,15 @@ const style = StyleSheet.create({
     alignContent: 'left',
     justifyContent: 'left',
     gap: 8,
+  },
+  box4: {
+    width: 190,
+    height: 220,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    gap: 10,
+    top: 60,
+    marginLeft: 100,
   },
   signInTitle : {
     color: '#DC989A',
@@ -56,7 +66,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     width: 190,
     height: 80,
-    top: 180,
+    top: 120,
     marginLeft: 100,
   },
   registerTitle : {
@@ -68,7 +78,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     width: 190,
     height: 80,
-    top: 120,
+    top: 20,
     marginLeft: 100,
   },
   signInText: {
@@ -97,8 +107,8 @@ const style = StyleSheet.create({
   },
   userTitle : {
     color: '#DC989A',
-    fontFamily: 'Poppins-Medium',
-    fontSize: 34,
+    fontFamily: 'Poppins-Bold',
+    fontSize: 32,
     //fontWeight: 'bold',
     alignItems: 'center',
     justifyContent: 'center',
@@ -228,6 +238,55 @@ const style = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 30,
     top: 30,
+  },
+  doctorImage : {
+    width: 50,
+    height: 50,
+    borderRadius: 50,
+    borderWidth: 2,
+    borderColor: '#DC989A',
+  },
+  headerContainer : {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 15,
+    justifyContent: 'center',
+    backgroundColor: '#F2E1E2',
+    padding: 20,
+  },
+  doctorTitle : {
+    color: '#DC989A',
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: 24,
+  },
+  bgImage: {
+    flex: 1,
+    width:390,
+    height:490,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    marginTop: 100,
+  },
+  bgImage2: {
+    flex: 1,
+    width:306,
+    height:504,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    marginTop: 80,
+    margin: 40,
+  },
+  bgImage3: {
+    flex: 1,
+    width:306,
+    height:399,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    marginTop: 120,
+    margin: 40,
   },
 });
 

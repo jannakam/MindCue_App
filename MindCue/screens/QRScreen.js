@@ -3,6 +3,7 @@ import { TextInput } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import QRCode from 'react-native-qrcode-svg';
+import UserNavbar from '../components/UserNavbar';
 import style from '../components/style';
 
 function QRScreen({ navigation }) {
