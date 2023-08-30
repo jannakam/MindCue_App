@@ -8,7 +8,7 @@ import style from '../components/style';
 function HomeScreen({ navigation }) {
     return (
         <SafeAreaView>
-            <ImageBackground source={'../assets/images/Ellipse15'}/>
+            {/* <ImageBackground source={'../assets/images/Ellipse15'}/> */}
             <View style={style.dashboard}>
                 <Text style={style.dashboardTitle}>DashBoard</Text>
                 <Text style={style.dashboardOptions} onPress={() => navigation.navigate('List of triggers')}>List of triggers</Text>
@@ -16,7 +16,6 @@ function HomeScreen({ navigation }) {
                 <Text style={style.dashboardOptions} onPress={() => navigation.navigate('Set Screen Time')}>Set screen time</Text>
                 <Text style={style.dashboardOptions} onPress={() => navigation.navigate('QR Code')}>QR code</Text>
             </View>
-
         </SafeAreaView>
     );
   }

@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { Ionicons } from '@expo/vector-icons';
 import style from './style';
 
 
@@ -21,7 +22,7 @@ const Tab = createBottomTabNavigator();
 function UserNavbar() {
     return (
             <Tab.Navigator>
-                <Tab.Screen name='Home' component={HomeScreen} />
+                <Tab.Screen name='HomeScreen' component={HomeScreen} />
             </Tab.Navigator>
       );
 }
