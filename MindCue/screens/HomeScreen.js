@@ -7,7 +7,9 @@ import style from '../components/style';
 function HomeScreen({ navigation }) {
     return (
         <SafeAreaView>
-            {/* <ImageBackground source={'../assets/images/Ellipse15'}/> */}
+            <ImageBackground style={style.userCircle} source={require('../assets/images/Ellipse15.png')}/>
+            <Text style={style.userGreet}>Hello User!</Text>
+            <Text style={style.userGreet2}>Hope you feel great today</Text>
             <View style={style.dashboard}>
                 <Text style={style.dashboardTitle}>DashBoard</Text>
                 <Text style={style.dashboardOptions} onPress={() => navigation.navigate('TriggerScreen')}>List of triggers</Text>
