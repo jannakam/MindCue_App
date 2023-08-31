@@ -28,7 +28,7 @@ function App() {
   return (
     <NavigationContainer>
     <Stack.Navigator name='HomeScreen' initialRouteName={HomeScreen}>
-        {/* <Stack.Screen name='UserNavbar' component={UserNavbar} options={{ headerShown: false }}/> */}
+        <Stack.Screen name='UserNavbar' component={UserNavbar} options={{ headerShown: false }}/>
         <Stack.Screen name='SignInScreen' component={SignInScreen} />
         <Stack.Screen name='SignUpScreen' component={SignUpScreen} />
         <Stack.Screen name='UserVerification' component={UserVerification} />
