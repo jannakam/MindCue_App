@@ -40,11 +40,11 @@ function UserNavbar() {
                   iconName = focused ? 'history' : 'history';
 
                 } else if (rn === profilePage) {
-                    iconName = focused ? 'account' : 'account-outline';
+                    iconName = focused ? 'account' : 'account';
                   }
     
                 // You can return any component that you like here!
-                return <Icon name={iconName} size={size} color={color} />;
+                return <Icon name={iconName} size={35} color={'#DC989A'} />;
               },
             })}>
 
