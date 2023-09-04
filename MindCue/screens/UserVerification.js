@@ -26,12 +26,18 @@ function UserVerification({ navigation }) {
   }
     return (
       <SafeAreaView>
+        <ImageBackground style={style.bgGraphic13} source={require('../assets/images/Ellipse10.png')}/>
+        <ImageBackground source={require('../assets/images/Rectangle24.png')} style={style.bgImage3}/>
+        <ImageBackground source={require('../assets/images/Ellipse5.png')} style={style.bgGraphic11}/>
+        <ImageBackground style={style.bgGraphic12} source={require('../assets/images/Ellipse7.png')}/>
+        <ImageBackground style={style.bgGraphic14} source={require('../assets/images/Ellipse8.png')}/>
+
         <View style={style.box4}>
-        <ImageBackground source={require('../assets/images/Rectangle24.png')} style={style.bgImage2}/>
         <View>
           <Text style={style.userTitle}>Hello User!</Text>
-          <Text style={style.generalText}>Please enter verification code:</Text>
+          <Text style={style.generalText3}>Please enter verification code:</Text>
           <TextInput style={style.numberInput} keyboardType='numeric' onChangeText={text => onChanged(text)} value={number} maxLength={4} />
+          <Text style={style.generalText3}>Didn't receive code? <Text style={style.generalText2}>Send again.</Text></Text>
           <Text style={style.button3} onPress={() => navigation.navigate('UserVerification')}>Next</Text>
         </View>
         </View>

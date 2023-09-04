@@ -1,4 +1,4 @@
-import { SafeAreaView, View, Text, Button} from 'react-native';
+import { SafeAreaView, View, Text, Button, ImageBackground} from 'react-native';
 import { RadioButton } from 'react-native-paper';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
@@ -9,6 +9,8 @@ function ReportScreen({ navigation }) {
     const [checked, setChecked] = React.useState('first');
     return (
         <SafeAreaView>
+            <ImageBackground source={require('../assets/images/Rectangle22.png')} style={style.bgGraphic15}/>
+            <ImageBackground source={require('../assets/images/Rectangle33.png')} style={style.bgGraphic16}/>
             <View style={style.generalBox}>
                 <Text style={style.triggersTitle}>Report Generator</Text>
                 <View style={style.radiobuttonContainer}>
@@ -23,7 +25,7 @@ function ReportScreen({ navigation }) {
                 <RadioButton color='#DC989A' uncheckedColor= '#638184' value='Monthly' status={checked === 'third' ? 'checked' : 'unchecked'} onPress={() => setChecked('third')} />
                 <Text>Monthly</Text>
                 </View>
-                <Button style={style.button1} title='Download Report'/>
+                <Text style={style.button1}>Download report</Text>
             </View>
         </SafeAreaView>
         );

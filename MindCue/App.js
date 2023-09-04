@@ -15,6 +15,7 @@ import ScreenTimeScreen from './screens/ScreenTimeScreen';
 import ChatScreen from './screens/ChatScreen';
 import LogScreen from './screens/LogScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import EditScreen from './screens/EditScreen';
 import style from './components/style';
 
 // This should be the background image for the sign in page
@@ -28,7 +29,7 @@ function App() {
   return (
     <NavigationContainer>
     <Stack.Navigator name='HomeScreen' initialRouteName={HomeScreen}>
-        {/* <Stack.Screen name='UserNavbar' component={UserNavbar} options={{ headerShown: false }}/> */}
+        <Stack.Screen name='UserNavbar' component={UserNavbar} options={{ headerShown: false }}/>
         <Stack.Screen name='SignInScreen' component={SignInScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
         <Stack.Screen name='SignUpScreen' component={SignUpScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
         <Stack.Screen name='UserVerification' component={UserVerification} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
@@ -40,6 +41,7 @@ function App() {
         <Stack.Screen name='ChatScreen' component={ChatScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
         <Stack.Screen name='LogScreen' component={LogScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
         <Stack.Screen name='ProfileScreen' component={ProfileScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
+        <Stack.Screen name='EditScreen' component={EditScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
         </Stack.Navigator>
       </NavigationContainer>
   );
