@@ -235,6 +235,17 @@ const style = StyleSheet.create({
     marginLeft: 30,
     top: 30,
   },
+  generalBox2 : {
+    justifyContent: 'center',
+    alignContent: 'center',
+    width: 190,
+    borderRadius: 20,
+    gap: 7,
+    padding: 10,
+    width: 330,
+    alignItems: 'left',
+    marginLeft: 30,
+  },
   triggersTitle : {
     backgroundColor: '#D2E5E7',
     color: '#638184',
@@ -584,6 +595,13 @@ const style = StyleSheet.create({
     fontSize: 16,
     color: '#DC989A',
     marginTop: 15,
+  },
+  userEditInput : {
+    width: 280,
+    backgroundColor: 'transparent',
+    height: 40,
+    borderWidth: 1.5,
+    borderColor: '#DC989A',
   },
 });
 
