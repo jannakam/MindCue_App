@@ -26,7 +26,6 @@ function EditScreen({ navigation }) {
                 <TextInput style={style.userEditInput} activeUnderlineColor='#DC989A' underlineColor='transparent' placeholder='66551199'></TextInput>
                 <Text style={style.generalText}>Relationship</Text>
                 <TextInput style={style.userEditInput} activeUnderlineColor='#DC989A' underlineColor='transparent' placeholder='Mother'></TextInput>
-
             </View>
             </View>
         </SafeAreaView>
