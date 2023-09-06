@@ -1,4 +1,4 @@
-import { SafeAreaView, View, Text, TouchableOpacity, Button} from 'react-native';
+import { SafeAreaView, View, Text, TouchableOpacity, Button, FlatList} from 'react-native';
 import * as React from 'react';
 import { Checkbox, TextInput } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
@@ -27,6 +27,35 @@ function TriggerScreen({ navigation }) {
     const [searchQuery, setSearchQuery] = React.useState('');
     const onChangeSearch = query => setSearchQuery(query);
         
+    const [keyword, setKeyword] = React.useState("")
+    const [keywordArray, setKeywordArray] = React.useState([])
+
+    const onSubmitPress = () => {
+        var keywordObject = {
+            id: new Date(),
+            title: keyword,
+            details: 'demo detail'
+        }
+
+        setKeywordArray([...keywordArray, keywordObject])
+    }
+
+    const onSubmitAddToList = () => {
+        var keywordData = {
+            id: new Date(),
+            title: keyword,
+            detail: 'keyword details'
+        }
+        setKeywordArray([...keywordArray, keywordData])
+    }
+
+    const renderItemList = () => {
+        <View>
+            <Text style={{color: 'white', fontSize: 24}}>title</Text>
+            <Text>X</Text>
+        </View>
+    }
+
     return (
         <SafeAreaView>
             <View style={style.generalBox}>
@@ -50,6 +79,19 @@ function TriggerScreen({ navigation }) {
                 {/* <SearchBar placeholder='Search for a trigger' onChangeText={onChangeSearch} value={searchQuery}/> */}
             </View>
             <View style={style.keywords}>
+                <TextInput placeholder='Add a keyword trigger' keyboardType='default' onChangeText={value=> (
+                   setKeyword(value) 
+                )} />
+
+                <TouchableOpacity onPress={() => onSubmitAddToList()}>
+                    <Text>Add</Text>
+                </TouchableOpacity>
+
+                <FlatList data={keywordArray} 
+                renderItem={renderItemList} 
+                keyExtractor={item => item.id}
+                />
+
             </View>
         </SafeAreaView>
         );
