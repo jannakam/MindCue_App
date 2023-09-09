@@ -2,6 +2,10 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "assets/fonts/BebasNeue-Regular.ttf",
+      "sha1": "ac310d4271fb1ed5012f6d512b0e7e061bcefdd2"
+    },
+    {
       "path": "assets/fonts/Lexend-Black.ttf",
       "sha1": "e7ce003e94ca32c8be251e4cd3ee6dd7dc3fae28"
     },

@@ -685,7 +685,28 @@ const style = StyleSheet.create({
     fontSize: 24,
     top: 150,
     marginLeft: 45,
-  }
+  },
+  timerStyle : {
+    fontSize: 50,
+    color: '#DC989A',
+    backgroundColor: '#E5EFF0',
+    fontFamily: 'BebasNeue-Regular',
+    width: 280,
+    textAlign: 'center',
+    borderRadius: 15,
+    margin: 30,
+  },
+  timerContainer : {
+    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center',
+    alignContent: 'center',
+    textAlign: 'center',
+    borderWidth: 2,
+    borderColor: '#C2DCDE',
+    margin: 35,
+    borderRadius: 18,
+  },
 });
 
 export default style;
