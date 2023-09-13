@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import { getLeftStyles } from 'react-native-paper/lib/typescript/components/List/utils';
 
 const style = StyleSheet.create({
   button1: {
@@ -228,7 +229,7 @@ const style = StyleSheet.create({
     alignContent: 'center',
     width: 190,
     borderRadius: 20,
-    gap: 7,
+    gap: 5,
     paddingBottom: 10,
     width: 330,
     alignItems: 'center',
@@ -276,17 +277,18 @@ const style = StyleSheet.create({
   },
   keywords : {
     borderColor: '#C2DCDE',
+    color: '#638184',
     borderWidth: 5,
     justifyContent: 'center',
     alignContent: 'center',
+    alignItems: 'center',
     width: 190,
     borderRadius: 20,
-    gap: 7,
-    paddingBottom: 30,
+    gap: 10,
+    paddingBottom: 10,
     width: 330,
-    alignItems: 'center',
     marginLeft: 30,
-    top: 80,
+    top: 30,
   },
   radiobuttonContainer : {
     flexDirection: 'row',
@@ -646,7 +648,7 @@ const style = StyleSheet.create({
     marginLeft: 16,
     backgroundColor: 'transparent',
     borderColor: '#DC989A',
-    borderWidth: 1,
+    borderWidth: 1.5,
     marginVertical: 10,
   },
   doctorContainer: {
@@ -706,6 +708,28 @@ const style = StyleSheet.create({
     borderColor: '#C2DCDE',
     margin: 35,
     borderRadius: 18,
+  },
+  keywordContainer : {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: 20,
+    fontSize: 16,
+    width: 275,
+    fontFamily: 'Lexend-Regular',
+  },
+  keywordBox : {
+    borderWidth: 1.5,
+    backgroundColor: 'transparent',
+    width: 280,
+    fontSize: 16,
+    borderColor: '#DC989A',
+    borderRadius: 5,
+    fontFamily: 'Lexend-Regular',
+  },
+  addButton : {
+    color: '#DC989A',
+    marginLeft: 250,
+    fontFamily: 'Lexend-Regular',
   },
 });
 

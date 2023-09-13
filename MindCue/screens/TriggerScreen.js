@@ -6,61 +6,41 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import style from '../components/style';
 
-function AddWordsItem(props) {
-const [inputWords, setWords] = React.useState('');
-const ClickedAddWords = () => {
-    props.wordsToAdd(inputWords)
-    setWords('')
-    }
-    return (
-        <><Text style={style.triggersTitle}>Keywords List</Text><TouchableOpacity onPress={ClickedAddWords}>
-            <Text>Add Triggers:</Text>
-        </TouchableOpacity><TextInput placeholder='ex: Guns' onChangeText={(result) => setWords(result)} value={inputWords}></TextInput></>
-);
-}
-
 function TriggerScreen({ navigation }) {
     const [war, setWar] = React.useState(false);
     const [childAbuse, setChildAbuse] = React.useState(false);
     const [gore, setGore] = React.useState(false);
     const [death, setDeath] = React.useState(false);
-    const [searchQuery, setSearchQuery] = React.useState('');
-    const onChangeSearch = query => setSearchQuery(query);
-        
-    const [keyword, setKeyword] = React.useState("")
-    const [keywordArray, setKeywordArray] = React.useState([])
 
-    // const onSubmitPress = () => {
-    //     var keywordObject = {
-    //         id: new Date(),
-    //         title: keyword,
-    //         details: 'demo detail'
-    //     }
+    const [inputText, setInputText] = React.useState('');
+    const [list, setList] = React.useState([]);
+      
+    const handleAddItem = () => {
+        if (inputText.trim() === '') {
+            return;
+        }
+      
+          setList([...list, inputText]);
+          setInputText('');
+        };
+      
+    const handleDeleteItem = (index) => {
+    const updatedList = [...list];
+        updatedList.splice(index, 1);
+        setList(updatedList);
+    };
 
-    //     setKeywordArray([...keywordArray, keywordObject])
-    // }
-
-    // const onDeleteItem = (title) => {
-    //     const filterData = keywordArray.filter(item => item.title !== title)
-    //     setKeywordArray(filterData)
-    // }
-
-    // const onSubmitAddToList = () => {
-    //     var keywordData = {
-    //         id :new Date(),
-    //         title:keyword,
-    //         detail:'keyword details',
-    //     }
-    //     setKeywordArray([...keywordArray, keywordData])
-    // }
-
-    // const renderItemList = () => {
-    //     <View>
-    //         <Text style={{fontSize: 14, color:'black'}}>title</Text>
-    //         <Text style={{fontSize: 14, color:'black'}}>X</Text>
-    //     </View>
-    // }
-
+    const ListItem = ({ text, onDelete }) => {
+        return (
+          <View style={style.keywordContainer}>
+            <Text style={{color: '#638184', fontFamily: 'Lexend-Regular', fontSize: 16,}}>{text}</Text>
+            <TouchableOpacity onPress={onDelete}>
+              <Icon name="remove" size={20} color="#DC989A" />
+            </TouchableOpacity>
+          </View>
+        );
+      };
+      
     return (
         <SafeAreaView>
             <View style={style.generalBox}>
@@ -81,28 +61,27 @@ function TriggerScreen({ navigation }) {
                 <Checkbox color='#DC989A' uncheckedColor='#638184' label='Death' status={death ? 'checked' : 'unchecked'} onPress={() => {setDeath(!death);}}/>
                 <Text style={style.triggerOptions}>Death</Text>
                 </View>
-                {/* <SearchBar placeholder='Search for a trigger' onChangeText={onChangeSearch} value={searchQuery}/> */}
             </View>
             <View style={style.keywords}>
-                {/* <TextInput 
-                value= {keyword}
-                placeholder='Add a keyword trigger' 
-                keyboardType='default' 
-                onChangeText={value=> {
-                   setKeyword(value) 
-                }} />
-
-                <TouchableOpacity 
-                onPress={() => onSubmitAddToList()}>
-                    <Text>Add</Text>
-                </TouchableOpacity>
-
-                <FlatList 
-                data={keywordArray} 
-                renderItem={renderItemList} 
-                keyExtractor={item => item.id}
-                /> */}
-
+            <Text style={style.triggersTitle}>Keywords List</Text>
+            <FlatList
+              data={list}
+              keyExtractor={(item, index) => index.toString()}
+              renderItem={({ item, index }) => (
+                <ListItem text={item} onDelete={() => handleDeleteItem(index)} />
+              )}
+            />
+            <TextInput
+              style={style.keywordBox}
+              placeholder="Add your own"
+              placeholderTextColor={'#DC989A'}
+              value={inputText}
+              activeUnderlineColor='transparent' 
+              underlineColor='transparent'
+              onChangeText={(text) => setInputText(text)}
+            />
+            <Text style={style.addButton} onPress={handleAddItem}>Add</Text>
+            
             </View>
         </SafeAreaView>
         );
