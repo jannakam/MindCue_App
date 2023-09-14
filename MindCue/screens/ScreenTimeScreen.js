@@ -1,8 +1,6 @@
 import { SafeAreaView, StyleSheet, View, Button, Text, Dimensions, StatusBar, TouchableOpacity, Platform} from 'react-native';
 import { TimerPicker } from "react-native-timer-picker";
 import React from 'react';
-import BackgroundTimer from "react-native-background-timer"
-import CountDown from 'react-native-countdown-component';
 import { TextInput } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import DateTimePicker from '@react-native-community/datetimepicker';
