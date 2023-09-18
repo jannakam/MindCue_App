@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, SafeAreaView, ImageBackground, Button} from 'react-native';
+import {Text, View, SafeAreaView, ImageBackground, Button, useState} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RadioButton, TextInput } from 'react-native-paper';
@@ -13,6 +13,7 @@ import ReportScreen from './screens/ReportScreen';
 import QRScreen from './screens/QRScreen';
 import ScreenTimeScreen from './screens/ScreenTimeScreen';
 import ChatScreen from './screens/ChatScreen';
+import DoctorVerification from './screens/DoctorVerification';
 import LogScreen from './screens/LogScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import EditScreen from './screens/EditScreen';
@@ -27,6 +28,8 @@ const Stack = createNativeStackNavigator();
 
 // This is the function that is going to list all our screens
 function App() {
+  //const [isSignedIn, setIsSignedIn] = useState(false);
+  
   return (
     <NavigationContainer>
     <Stack.Navigator name='HomeScreen' initialRouteName={HomeScreen}>
@@ -34,6 +37,7 @@ function App() {
         <Stack.Screen name='SignInScreen' component={SignInScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
         <Stack.Screen name='SignUpScreen' component={SignUpScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
         <Stack.Screen name='UserVerification' component={UserVerification} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
+        <Stack.Screen name='DoctorVerification' component={DoctorVerification} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
         <Stack.Screen name='HomeScreen' component={HomeScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A',}}/>
         <Stack.Screen name='TriggerScreen' component={TriggerScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2',}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
         <Stack.Screen name='ReportScreen' component={ReportScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
@@ -44,7 +48,6 @@ function App() {
         <Stack.Screen name='ProfileScreen' component={ProfileScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
         <Stack.Screen name='EditScreen' component={EditScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
         <Stack.Screen name='DoctorChat' component={DoctorChat} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
-
         </Stack.Navigator>
       </NavigationContainer>
   );

@@ -13,25 +13,27 @@ function SignUpScreen({ navigation }) {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
+    const [isDoctor, setIsDoctor] = React.useState(false);
+    const [isPatient, setIsPatient] = React.useState(false);
 
-    const handleSignUp = () => {
-      // Email validation regex
-      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    // const handleSignUp = () => {
+    //   // Email validation regex
+    //   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
   
-      if (!name || !email || !password || !confirmPassword) {
-        Alert.alert('Error', 'Please fill in all fields.');
-      } else if (!emailRegex.test(email)) {
-        Alert.alert('Error', 'Please enter a valid email address.');
-      } else if (password.length < 8) {
-        Alert.alert('Error', 'Password must be at least 8 characters long.');
-      } else if (password !== confirmPassword) {
-        Alert.alert('Error', 'Passwords do not match.');
-      } else {
-        // Perform sign-up logic here
-        // If successful, navigate to the next screen
-        navigation.navigate('UserVerification');
-      }
-    };
+    //   if (!name || !email || !password || !confirmPassword) {
+    //     Alert.alert('Error', 'Please fill in all fields.');
+    //   } else if (!emailRegex.test(email)) {
+    //     Alert.alert('Error', 'Please enter a valid email address.');
+    //   } else if (password.length < 8) {
+    //     Alert.alert('Error', 'Password must be at least 8 characters long.');
+    //   } else if (password !== confirmPassword) {
+    //     Alert.alert('Error', 'Passwords do not match.');
+    //   } else {
+    //     // Perform sign-up logic here
+    //     // If successful, navigate to the next screen
+    //     navigation.navigate('UserVerification');
+    //   }
+    // };
 
     return(
     <SafeAreaView>
@@ -70,19 +72,19 @@ function SignUpScreen({ navigation }) {
       <Text style={style.userQues}>What kind of user are you?</Text>
       <View style={style.box3}>
       <View style={style.userTypeContainer}>
-      <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I am a patient with a doctor' status={checked === 'first' ? 'checked' : 'unchecked'} onPress={() => setChecked('first')} />
+      <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I am a patient with a doctor' status={checked === 'first' ? 'checked' : 'unchecked'} onPress={() => setChecked('first') && setIsPatient(true)} />
       <Text>I am a patient with a doctor</Text>
       </View>
       <View style={style.userTypeContainer}>
-      <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I do not currently see a doctor' status={checked === 'second' ? 'checked' : 'unchecked'} onPress={() => setChecked('second')} />
+      <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I do not currently see a doctor' status={checked === 'second' ? 'checked' : 'unchecked'} onPress={() => setChecked('second') && setIsPatient(true)} />
       <Text>I do not currently see a doctor</Text>
       </View>
       <View style={style.userTypeContainer}>
-      <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I am a licensed mental health professional' status={checked === 'third' ? 'checked' : 'unchecked'} onPress={() => setChecked('third')} />
+      <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I am a licensed mental health professional' status={checked === 'third' ? 'checked' : 'unchecked'} onPress={() => setChecked('third') && setIsDoctor(true)} />
       <Text>I am a licensed mental health professional</Text>
       </View>
       </View>
-      <Text style={style.button2} onPress={() => navigation.navigate('UserVerification')}>Sign up</Text>
+      <Text style={style.button2} onPress={() => isDoctor ?  navigation.navigate('DoctorVerification') : navigation.navigate('UserVerification')}>Sign up</Text>
       </View>
     </View>
     </SafeAreaView>

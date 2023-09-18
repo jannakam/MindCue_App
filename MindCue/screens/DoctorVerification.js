@@ -7,7 +7,7 @@ import style from '../components/style';
 
 
 // The page that allows the user to use a pin code to verify the account creation
-function UserVerification({ navigation }) {
+function DoctorVerification({ navigation }) {
     const [number, setNumber] = React.useState('');
     // This function limits the user to using only numbers
     function onChanged(text) {
@@ -38,6 +38,8 @@ function UserVerification({ navigation }) {
           <Text style={style.generalText3}>Please enter verification code:</Text>
           <TextInput style={style.numberInput} keyboardType='numeric' onChangeText={text => onChanged(text)} value={number} maxLength={4} />
           <Text style={style.generalText3}>Didn't receive code? <Text style={style.generalText2}>Send again.</Text></Text>
+          <Text style={style.generalText3}>Please enter license ID:</Text>
+          <TextInput style={style.numberInput} keyboardType='numeric' onChangeText={text => onChanged(text)} value={number} maxLength={8} />
           <Text style={style.button3} onPress={() => navigation.navigate('HomeScreen')}>Next</Text>
         </View>
         </View>
@@ -45,4 +47,4 @@ function UserVerification({ navigation }) {
     );
   }
 
-  export default UserVerification;
+  export default DoctorVerification;
