@@ -43,17 +43,19 @@ function DoctorChat () {
                 backgroundColor: item.user.id === 1 ? '#D2E5E7' : '#FFF',
                 alignSelf: item.user.id === 1 ? 'flex-end' : 'flex-start',
                 margin: 4,
+                color: '#638184',
                 borderRadius: 8,
                 maxWidth: '70%',
                 }}>
-            <Text>{`${item.user.name} (${item.timestamp}):`}</Text>
-            <Text>{item.text}</Text>
+            <Text style={{color: '#638184'}}>{`${item.user.name} (${item.timestamp}):`}</Text>
+            <Text style={{color: '#638184'}}>{item.text}</Text>
           </View>
         )}/>
         <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10}}>
         <TextInput
           style={{ flex: 1, padding: 8 }}
           placeholder="Type your message..."
+          placeholderTextColor={'#638184'}
           value={inputText}
           onChangeText={(text) => setInputText(text)}
         />

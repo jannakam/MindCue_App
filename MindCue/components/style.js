@@ -197,7 +197,7 @@ const style = StyleSheet.create({
     paddingBottom: 30,
     width: 330,
     alignItems: 'center',
-    marginLeft: 30,
+    marginLeft: 15,
     top: 65
   },
   dashboardTitle : {
@@ -233,7 +233,7 @@ const style = StyleSheet.create({
     paddingBottom: 10,
     width: 330,
     alignItems: 'center',
-    marginLeft: 30,
+    marginLeft: 15,
     top: 10,
   },
   generalBox2 : {
@@ -250,7 +250,7 @@ const style = StyleSheet.create({
   triggersTitle : {
     backgroundColor: '#D2E5E7',
     color: '#638184',
-    fontSize: 25,
+    fontSize: 20,
     padding: 10,
     width: 320,
     height: 55,
@@ -287,7 +287,7 @@ const style = StyleSheet.create({
     gap: 10,
     paddingBottom: 10,
     width: 330,
-    marginLeft: 30,
+    marginLeft: 15,
     top: 30,
   },
   radiobuttonContainer : {
@@ -316,7 +316,7 @@ const style = StyleSheet.create({
     gap: 50,
     width: 330,
     alignItems: 'center',
-    marginLeft: 30,
+    marginLeft: 15,
     top: 30,
   },
   doctorImage : {
@@ -555,9 +555,9 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    padding: 20,
+    padding: 15,
     borderRadius: 15,
-    margin: 25,
+    margin: 15,
   },
   profileContainer2: {
     borderWidth: 2,
@@ -578,30 +578,30 @@ const style = StyleSheet.create({
   },
   userEmail: {
     fontFamily: 'Lexend-Regular',
-    fontSize: 18,
+    fontSize: 14,
     color: '#638184',
     marginBottom: 20,
   },
   userInfo: {
     fontFamily: 'Poppins-Bold',
-    fontSize: 16,
+    fontSize: 14,
     color: '#638184',
   },
   userECInfo: {
     fontFamily: 'Lexend-Regular',
-    fontSize: 16,
+    fontSize: 14,
     color: '#638184',
   },
   userEdit: {
     fontFamily: 'Lexend-Regular',
-    fontSize: 16,
+    fontSize: 14,
     color: '#DC989A',
     marginTop: 15,
   },
   userEditInput : {
     width: 280,
     backgroundColor: 'transparent',
-    height: 40,
+    height: 35,
     borderWidth: 1.5,
     borderColor: '#DC989A',
   },
@@ -623,12 +623,12 @@ const style = StyleSheet.create({
   linkStyle : {
     color: '#638184',
     fontFamily: 'Poppins-Regular',
-    fontSize: 14,
+    fontSize: 10,
   },
   logsContainer: {
     borderBottomWidth: 1,
     borderColor: '#638184',
-    width: 360,
+    width: 328,
     padding: 10,
     justifyContent: 'center',
     alignItems: 'left',
@@ -638,12 +638,12 @@ const style = StyleSheet.create({
   },
   seeMore : {
     color: '#DC989A',
-    marginLeft: 307,
+    marginLeft: 270,
     fontFamily: 'Poppins-Bold',
     marginTop: 7,
   },
   search : {
-    width: 360,
+    width: 328,
     borderRadius: 5,
     marginLeft: 16,
     backgroundColor: 'transparent',
@@ -657,12 +657,12 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
-    gap: 10,
+    gap: 5,
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderColor: '#638184',
     paddingVertical: 10,
-    marginLeft: 45,
+    marginLeft: 30,
     top: 150,
   },
   doctorTitle: {
@@ -686,7 +686,7 @@ const style = StyleSheet.create({
     fontFamily: 'Poppins-Bold',
     fontSize: 24,
     top: 150,
-    marginLeft: 45,
+    marginLeft: 40,
   },
   timerStyle : {
     fontSize: 50,

@@ -15,15 +15,15 @@ function ReportScreen({ navigation }) {
                 <Text style={style.triggersTitle}>Report Generator</Text>
                 <View style={style.radiobuttonContainer}>
                 <RadioButton color='#DC989A' uncheckedColor= '#638184' value='Weekly' status={checked === 'first' ? 'checked' : 'unchecked'} onPress={() => setChecked('first')} />
-                <Text>Weekly</Text>
+                <Text style={{color: '#638184'}}>Weekly</Text>
                 </View>
                 <View style={style.radiobuttonContainer}>
                 <RadioButton color='#DC989A' uncheckedColor= '#638184' value='Bimonthly' status={checked === 'second' ? 'checked' : 'unchecked'} onPress={() => setChecked('second')} />
-                <Text>Bimonthly</Text>
+                <Text style={{color: '#638184'}}>Bimonthly</Text>
                 </View >
                 <View style={style.radiobuttonContainer}>
                 <RadioButton color='#DC989A' uncheckedColor= '#638184' value='Monthly' status={checked === 'third' ? 'checked' : 'unchecked'} onPress={() => setChecked('third')} />
-                <Text>Monthly</Text>
+                <Text style={{color: '#638184'}}>Monthly</Text>
                 </View>
                 <Text style={style.button1}>Download report</Text>
             </View>

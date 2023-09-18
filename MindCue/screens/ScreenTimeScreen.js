@@ -231,6 +231,7 @@ const styles = StyleSheet.create({
   timerText: {
     fontSize: 36,
     marginBottom: 20,
+    color: '#638184',
   },
   buttonContainer: {
     width: 100,
