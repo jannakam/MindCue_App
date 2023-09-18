@@ -9,6 +9,30 @@ import style from '../components/style';
 // This is the screen where the user registers a new account
 function SignUpScreen({ navigation }) {
     const [checked, setChecked] = React.useState('first');
+    const [name, setName] = React.useState('');
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const [confirmPassword, setConfirmPassword] = React.useState('');
+
+    const handleSignUp = () => {
+      // Email validation regex
+      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+  
+      if (!name || !email || !password || !confirmPassword) {
+        Alert.alert('Error', 'Please fill in all fields.');
+      } else if (!emailRegex.test(email)) {
+        Alert.alert('Error', 'Please enter a valid email address.');
+      } else if (password.length < 8) {
+        Alert.alert('Error', 'Password must be at least 8 characters long.');
+      } else if (password !== confirmPassword) {
+        Alert.alert('Error', 'Passwords do not match.');
+      } else {
+        // Perform sign-up logic here
+        // If successful, navigate to the next screen
+        navigation.navigate('UserVerification');
+      }
+    };
+
     return(
     <SafeAreaView>
     <View>
@@ -19,10 +43,30 @@ function SignUpScreen({ navigation }) {
     <ImageBackground style={style.bgGraphic10} source={require('../assets/images/Ellipse8.png')}/>
       <Text style={style.registerTitle}>Create Account</Text>
       <View style={style.box2}>
-      <TextInput style={style.textbox} placeholder='Name'></TextInput>
-      <TextInput style={style.textbox} placeholder='Email Address'></TextInput>
-      <TextInput style={style.textbox} placeholder='Password'></TextInput>
-      <TextInput style={style.textbox} placeholder='Confirm Password'></TextInput>
+
+      <TextInput 
+      style={style.textbox} 
+      placeholder='Name' 
+      value={name}
+      onChangeText={(text) => setName(text)}/>
+
+      <TextInput 
+      style={style.textbox} 
+      placeholder='Email Address' 
+      value={email}
+      onChangeText={(text) => setEmail(text)}/>
+
+      <TextInput 
+      style={style.textbox} 
+      placeholder='Password' 
+      value={password}
+      onChangeText={(text) => setPassword(text)}/>
+
+      <TextInput style={style.textbox} 
+      placeholder='Confirm Password' 
+      value={confirmPassword}
+      onChangeText={(text) => setConfirmPassword(text)}/>
+
       <Text style={style.userQues}>What kind of user are you?</Text>
       <View style={style.box3}>
       <View style={style.userTypeContainer}>

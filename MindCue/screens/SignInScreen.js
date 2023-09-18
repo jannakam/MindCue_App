@@ -23,7 +23,7 @@ function SignInScreen({ navigation }) {
           <View style={style.box1}>
             <TextInput style={style.textbox} placeholder='Email' />
             <TextInput style={style.textbox} placeholder='Password' />
-            <Text style={style.button1}>Sign in</Text>
+            <Text style={style.button1} onPress={() => navigation.navigate('HomeScreen')}>Sign in</Text>
           </View>
             <Text style={style.signInText} >Forgot Password?</Text>
             <Text style={style.signInText} onPress={() => navigation.navigate('SignUpScreen')}>New? Create account</Text>
