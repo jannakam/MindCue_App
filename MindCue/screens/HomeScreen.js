@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 function HomeScreen({ navigation }) {
     return (
         <SafeAreaView>
+            <View>
             <ImageBackground style={style.userCircle} source={require('../assets/images/Ellipse15.png')}/>
             <Text style={style.userGreet}>Hello User!</Text>
             <Text style={style.userGreet2}>Hope you feel great today</Text>
@@ -29,6 +30,7 @@ function HomeScreen({ navigation }) {
                 <Text style={style.dashboardOptions} onPress={() => navigation.navigate('QRScreen')}>QR code</Text>
                 <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183}} onPress={() => navigation.navigate('QRScreen')}/>
                 </View>
+            </View>
             </View>
         </SafeAreaView>
     );
