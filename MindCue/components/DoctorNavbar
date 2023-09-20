@@ -1,0 +1,51 @@
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import style from './style';
+
+
+// import the screens so we can link them to the navbar icons
+import DoctorHome from '../screens/DoctorHome/DoctorHome';
+
+// create variables for each tab in the navbar
+const DoctorHome = 'Home';
+
+// create the navbar using this imported method
+const Tab = createBottomTabNavigator();
+
+// this is where we add our screens to the navbar
+function UserNavbar() {
+    return (
+            <Tab.Navigator initialRouteName={DoctorHome}
+            screenOptions={({ route }) => ({
+              tabBarIcon: ({ focused, color, size }) => {
+                let iconName;
+                let rn = route.name;
+    
+                if (rn === DoctorHome) {
+                  iconName = focused ? 'home' : 'home';
+    
+                } else if (rn === chatPage) {
+                  iconName = focused ? 'chat' : 'chat';
+    
+                } else if (rn === logsPage) {
+                  iconName = focused ? 'history' : 'history';
+
+                } else if (rn === profilePage) {
+                    iconName = focused ? 'account' : 'account';
+                  }
+    
+                // You can return any component that you like here!
+                return <Icon name={iconName} size={35} color={'#DC989A'} selectionColor={'#638184'}/>;
+              },
+            })}>
+
+                <Tab.Screen name={DoctorHome} component={DoctorHome} />
+
+            </Tab.Navigator>
+      );
+}
+
+export default UserNavbar;

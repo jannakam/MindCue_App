@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import style from '../components/style';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-function HomeScreen({ navigation }) {
+function DoctorHome({ navigation }) {
     return (
         <SafeAreaView>
             <ImageBackground style={style.userCircle} source={require('../assets/images/Ellipse15.png')}/>
@@ -14,20 +14,20 @@ function HomeScreen({ navigation }) {
             <View style={style.dashboard}>
                 <Text style={style.dashboardTitle}>Patients List</Text>
                 <View style={style.dashboardContainer}>
-                <Text style={style.dashboardOptions} onPress={() => navigation.navigate('TriggerScreen')}>Latifah Aldhaferi</Text>
-                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183}} onPress={() => navigation.navigate('TriggerScreen')}/>
+                <Text style={style.dashboardOptions} onPress={() => navigation.navigate('Patient')}>Latifah Aldhaferi</Text>
+                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183}} onPress={() => navigation.navigate('Patient')}/>
                 </View>
                 <View style={style.dashboardContainer}>
-                <Text style={style.dashboardOptions} onPress={() => navigation.navigate('ReportScreen')}>Khalid Abdullah</Text>
-                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183}} onPress={() => navigation.navigate('ReportScreen')}/>
+                <Text style={style.dashboardOptions} onPress={() => navigation.navigate('Patient')}>Khalid Abdullah</Text>
+                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183}} onPress={() => navigation.navigate('Patient')}/>
                 </View>
                 <View>
-                <Text style={style.dashboardOptions} onPress={() => navigation.navigate('ScreenTimeScreen')}>Janna ALmuqaisib</Text>
-                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183}} onPress={() => navigation.navigate('ScreenTimeScreen')}/>
+                <Text style={style.dashboardOptions} onPress={() => navigation.navigate('Patient')}>Janna Almuqaisib</Text>
+                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183}} onPress={() => navigation.navigate('Patient')}/>
                 </View>
             </View>
         </SafeAreaView>
     );
   }
 
-  export default HomeScreen;
+  export default DoctorHome;
