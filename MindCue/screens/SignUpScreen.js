@@ -14,7 +14,6 @@ function SignUpScreen({ navigation }) {
     const [password, setPassword] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
     const [isDoctor, setIsDoctor] = React.useState(false);
-    const [isPatient, setIsPatient] = React.useState(false);
 
     // const handleSignUp = () => {
     //   // Email validation regex
@@ -72,15 +71,15 @@ function SignUpScreen({ navigation }) {
       <Text style={style.userQues}>What kind of user are you?</Text>
       <View style={style.box3}>
       <View style={style.userTypeContainer}>
-      <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I am a patient with a doctor' status={checked === 'first' ? 'checked' : 'unchecked'} onPress={() => setChecked('first') && setIsPatient(true)} />
+      <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I am a patient with a doctor' status={checked === 'first' ? 'checked' : 'unchecked'} onPress={() => setChecked('first')} />
       <Text>I am a patient with a doctor</Text>
       </View>
       <View style={style.userTypeContainer}>
-      <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I do not currently see a doctor' status={checked === 'second' ? 'checked' : 'unchecked'} onPress={() => setChecked('second') && setIsPatient(true)} />
+      <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I do not currently see a doctor' status={checked === 'second' ? 'checked' : 'unchecked'} onPress={() => setChecked('second')} />
       <Text>I do not currently see a doctor</Text>
       </View>
       <View style={style.userTypeContainer}>
-      <RadioButton color='#DC989A' uncheckedColor= '#638184' value='I am a licensed mental health professional' status={checked === 'third' ? 'checked' : 'unchecked'} onPress={() => setChecked('third') && setIsDoctor(true)} />
+      <RadioButton color='#DC989A' uncheckedColor= '#638184' value={'I am a licensed mental health professional'} status={checked === 'third' ? 'checked' : 'unchecked'} onPress={() => setChecked('third') && setIsDoctor(true)} />
       <Text>I am a licensed mental health professional</Text>
       </View>
       </View>

@@ -40,7 +40,7 @@ function DoctorVerification({ navigation }) {
           <Text style={style.generalText3}>Didn't receive code? <Text style={style.generalText2}>Send again.</Text></Text>
           <Text style={style.generalText3}>Please enter license ID:</Text>
           <TextInput style={style.numberInput} keyboardType='numeric' onChangeText={text => onChanged(text)} value={number} maxLength={8} />
-          <Text style={style.button3} onPress={() => navigation.navigate('HomeScreen')}>Next</Text>
+          <Text style={style.button3} onPress={() => navigation.navigate('DoctorHome')}>Next</Text>
         </View>
         </View>
       </SafeAreaView>
