@@ -56,6 +56,7 @@ function DoctorChat () {
           style={{ flex: 1, padding: 8 }}
           placeholder="Type your message..."
           placeholderTextColor={'#638184'}
+          color={'#638184'}
           value={inputText}
           onChangeText={(text) => setInputText(text)}
         />

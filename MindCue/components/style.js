@@ -71,7 +71,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
     gap: 20,
     top: 130,
-    marginLeft: 100,
+    marginHorizontal: '25%',
   },
   box2: {
     width: 190,
@@ -80,7 +80,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     gap: 30,
     top: 100,
-    marginLeft: 100,
+    marginHorizontal: '25%',
   },
   box3 : {
     color: 'black',
@@ -102,13 +102,13 @@ const style = StyleSheet.create({
     color: '#DC989A',
     fontFamily: 'Poppins-Bold',
     //fontWeight: 'bold',
-    fontSize: 51,
+    fontSize: 46,
     alignItems: 'center',
     justifyContent: 'center',
     width: 190,
     height: 80,
     top: 100,
-    marginLeft: 100,
+    marginHorizontal: '25%',
   },
   registerTitle : {
     color: '#DC989A',

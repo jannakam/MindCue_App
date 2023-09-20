@@ -44,7 +44,7 @@ function UserNavbar() {
                   }
     
                 // You can return any component that you like here!
-                return <Icon name={iconName} size={35} color={'#DC989A'} />;
+                return <Icon name={iconName} size={35} color={'#DC989A'} selectionColor={'#638184'}/>;
               },
             })}>
 
