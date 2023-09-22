@@ -13,9 +13,14 @@ import ReportScreen from './screens/ReportScreen';
 import QRScreen from './screens/QRScreen';
 import ScreenTimeScreen from './screens/ScreenTimeScreen';
 import ChatScreen from './screens/ChatScreen';
+import DoctorNavbar from './components/DoctorNavbar';
 import DoctorVerification from './screens/DoctorVerification';
 import DoctorHome from './screens/DoctorHome';
+import DoctorProfile from './screens/DoctorProfile';
 import Patient from './screens/Patient';
+import DoctorEdit from './screens/DoctorEdit';
+import DoctorChatScreen from './screens/DoctorChatScreen';
+import DoctorContacts from './screens/DoctorContacts';
 import LogScreen from './screens/LogScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import EditScreen from './screens/EditScreen';
@@ -53,11 +58,15 @@ function App() {
     //   </NavigationContainer>
 
       <NavigationContainer>
-            <Stack.Navigator name='DoctorHome' initialRouteName={HomeScreen}>
-            {/* <Stack.Screen name='UserNavbar' component={UserNavbar} options={{ headerShown: false }}/> */}
+            <Stack.Navigator name='DoctorHome' initialRouteName={DoctorHome}>
+            <Stack.Screen name='DoctorNavbar' component={DoctorNavbar} options={{ headerShown: false }}/>
             <Stack.Screen name='DoctorVerification' component={DoctorVerification} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
             <Stack.Screen name='DoctorHome' component={DoctorHome} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
             <Stack.Screen name='Patient' component={Patient} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
+            <Stack.Screen name='DoctorProfile' component={DoctorProfile} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
+            <Stack.Screen name='DoctorEdit' component={DoctorEdit} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
+            <Stack.Screen name='DoctorChatScreen' component={DoctorChatScreen} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
+            <Stack.Screen name='DoctorContacts' component={DoctorContacts} options={{ headerStyle: {backgroundColor: '#f2f2f2'}, headerTitleStyle: {fontFamily: 'Poppins-SemiBold', color: '#638184'}, headerTintColor: '#DC989A', headerShadowVisible: false}}/>
             </Stack.Navigator>
       </NavigationContainer>
       );

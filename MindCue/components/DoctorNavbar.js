@@ -7,10 +7,14 @@ import style from './style';
 
 
 // import the screens so we can link them to the navbar icons
-import DoctorHome from '../screens/DoctorHome/DoctorHome';
+import DoctorHome from '../screens/DoctorHome';
+import DoctorProfile from '../screens/DoctorProfile';
+import DoctorContacts from '../screens/DoctorContacts';
 
 // create variables for each tab in the navbar
-const DoctorHome = 'Home';
+const DH = 'Home';
+const DP = 'Profile';
+const DC = 'Contacts'
 
 // create the navbar using this imported method
 const Tab = createBottomTabNavigator();
@@ -24,25 +28,28 @@ function UserNavbar() {
                 let iconName;
                 let rn = route.name;
     
-                if (rn === DoctorHome) {
+                if (rn === DH) {
                   iconName = focused ? 'home' : 'home';
     
-                } else if (rn === chatPage) {
+                } else if (rn === DP) {
+                  iconName = focused ? 'account' : 'account';
+                
+                } else if (rn === DC) {
                   iconName = focused ? 'chat' : 'chat';
-    
-                } else if (rn === logsPage) {
-                  iconName = focused ? 'history' : 'history';
+                }
 
-                } else if (rn === profilePage) {
-                    iconName = focused ? 'account' : 'account';
-                  }
+                // } else if (rn === profilePage) {
+                //     iconName = focused ? 'account' : 'account';
+                //   }
     
                 // You can return any component that you like here!
                 return <Icon name={iconName} size={35} color={'#DC989A'} selectionColor={'#638184'}/>;
               },
             })}>
 
-                <Tab.Screen name={DoctorHome} component={DoctorHome} />
+                <Tab.Screen name={DH} component={DoctorHome} />
+                <Tab.Screen name={DC} component={DoctorContacts} />
+                <Tab.Screen name={DP} component={DoctorProfile} />
 
             </Tab.Navigator>
       );
