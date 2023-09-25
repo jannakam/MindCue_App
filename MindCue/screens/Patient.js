@@ -1,10 +1,11 @@
-import { SafeAreaView, View, Text, Image, ImageProps, TouchableOpacity} from 'react-native';
+import { SafeAreaView, View, Text, Image, ImageProps, TouchableOpacity, Linking} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import style from '../components/style';
 
 function Patient({ navigation }) {
+    let phoneNum = 96622338;
     return (
         <SafeAreaView>
             <View style={style.profileContainer3}>
@@ -16,10 +17,11 @@ function Patient({ navigation }) {
                <Text style={style.generalText2}>Email</Text>
                <Text style={style.generalText}>Latifahaldhafirii@hotmail.com</Text>
                </View>
-               <Text style={style.button4}>Send a Chat</Text>
+               <Text style={style.button4} onPress={() => navigation.navigate('DoctorChatScreen')}>Send a Chat</Text>
+               <Text></Text>
                <View style={style.button5}>
                <Icon name='phone' size={16} color={'#DC989A'}/>
-               <Text style={{color: '#DC989A', fontFamily: 'Poppins-SemiBold', fontSize: 14}}>Call Emergency Contact</Text>
+               <Text style={{color: '#DC989A', fontFamily: 'Poppins-SemiBold', fontSize: 14}} onPress={() => Linking.openURL(`tel:${phoneNumn}`)}>Call Emergency Contact</Text>
                </View>
                <View style={style.ECcontainer}>
                <Text style={{color: '#638184', fontFamily: 'Lexend-Bold', fontSize: 14}}>Name:</Text>
@@ -27,7 +29,7 @@ function Patient({ navigation }) {
                </View>
                <View style={style.ECcontainer}>
                <Text style={{color: '#638184', fontFamily: 'Lexend-Bold', fontSize: 14}}>Phone:</Text>
-               <Text style={{color: '#638184', fontFamily: 'Lexend-Regular', fontSize: 14}}>60420309</Text>
+               <Text style={{color: '#638184', fontFamily: 'Lexend-Regular', fontSize: 14}}>{phoneNum}</Text>
                </View>
                <View style={style.ECcontainer}>
                <Text style={{color: '#638184', fontFamily: 'Lexend-Bold', fontSize: 14}}>Relationship:</Text>

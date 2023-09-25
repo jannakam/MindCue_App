@@ -641,7 +641,6 @@ const style = StyleSheet.create({
     paddingVertical: 20,
     padding: 10,
     gap: 6,
-    paddingRight: 70,
     borderRadius: 15,
   },
   profileContainer4: {
@@ -650,8 +649,8 @@ const style = StyleSheet.create({
     flexDirection: 'column',
     paddingVertical: 20,
     padding: 10,
+    width: 275,
     gap: 6,
-    paddingRight: 70,
     borderRadius: 15,
   },
   userName: {
@@ -737,7 +736,7 @@ const style = StyleSheet.create({
   doctorContainer: {
     width: 300,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
     alignContent: 'center',
     gap: 5,

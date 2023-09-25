@@ -8,8 +8,8 @@ function DoctorProfile({ navigation }) {
         <SafeAreaView>
             <View style={style.profileContainer1}>
                 <Image source={require('../assets/images/User4.png')}></Image>
-               <Text style={style.userName}>Dr. Mohammad Jassim</Text>
-               <Text style={style.userEmail}>Latifahaldhafirii@hotmail.com</Text>
+               <Text style={style.userName}>Mohammad Jassim</Text>
+               <Text style={style.userEmail}>MohammadJassim@hotmail.com</Text>
                <Text style={style.userInfo}>Clinic Info</Text>
                <View style={style.profileContainer2}>
                <Text style={style.userInfo}>Phone:</Text>
