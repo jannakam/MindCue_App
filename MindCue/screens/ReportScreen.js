@@ -1,11 +1,14 @@
-import { SafeAreaView, View, Text, Button, ImageBackground} from 'react-native';
+import { SafeAreaView, View, Text, TouchableOpacity, Button, ImageBackground} from 'react-native';
 import { RadioButton } from 'react-native-paper';
 import React from 'react';
+import RNFetchBlob from 'rn-fetch-blob';
+import { downloadFile, getDownloadPermissionAndroid} from '../components/fileFunction';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import style from '../components/style';
 
 function ReportScreen({ navigation }) {
+    const fileUrl = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
     const [checked, setChecked] = React.useState('first');
     return (
         <SafeAreaView>
@@ -25,7 +28,22 @@ function ReportScreen({ navigation }) {
                 <RadioButton color='#DC989A' uncheckedColor= '#638184' value='Monthly' status={checked === 'third' ? 'checked' : 'unchecked'} onPress={() => setChecked('third')} />
                 <Text style={{color: '#638184'}}>Monthly</Text>
                 </View>
-                <Text style={style.button1}>Download report</Text>
+                <TouchableOpacity
+                onPress={() => {
+                if (Platform.OS === 'android') {
+                    getDownloadPermissionAndroid().then(granted => {
+                if (granted) {
+                    downloadFile(fileUrl);
+                }
+                });
+            }  else {
+                    downloadFile(fileUrl).then(res => {
+                        RNFetchBlob.ios.previewDocument(res.path());
+            });
+          }
+        }}>
+            <Text style={style.button1}>Download report</Text>
+      </TouchableOpacity>
             </View>
         </SafeAreaView>
         );

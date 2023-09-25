@@ -6,6 +6,7 @@ import style from '../components/style';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function DoctorChat () {
+    const fileUrl = 'https://www.africau.edu/images/default/sample.pdf';
     const [messages, setMessages] = useState([]);
     const [inputText, setInputText] = useState('');
     const flatListRef = useRef(null);
