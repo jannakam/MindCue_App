@@ -15,15 +15,15 @@ function DoctorHome({ navigation }) {
                 <Text style={style.dashboardTitle}>Patients List</Text>
                 <View style={style.dashboardContainer}>
                 <Text style={style.dashboardOptions} onPress={() => navigation.navigate('Patient')}>Latifah Aldhaferi</Text>
-                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183}} onPress={() => navigation.navigate('Patient')}/>
+                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183, top: 4}} onPress={() => navigation.navigate('Patient')}/>
                 </View>
                 <View style={style.dashboardContainer}>
                 <Text style={style.dashboardOptions} onPress={() => navigation.navigate('Patient')}>Khalid Abdullah</Text>
-                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183}} onPress={() => navigation.navigate('Patient')}/>
+                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183, top: 4}} onPress={() => navigation.navigate('Patient')}/>
                 </View>
-                <View>
+                <View style={style.dashboardContainer}>
                 <Text style={style.dashboardOptions} onPress={() => navigation.navigate('Patient')}>Janna Almuqaisib</Text>
-                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183}} onPress={() => navigation.navigate('Patient')}/>
+                <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183, top: 4}} onPress={() => navigation.navigate('Patient')}/>
                 </View>
             </View>
         </SafeAreaView>

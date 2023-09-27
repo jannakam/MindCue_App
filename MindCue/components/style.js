@@ -322,6 +322,8 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     width: 200,
+    alignContent: 'center',
+    justifyContent: 'space-around',
   },
   checkboxContainer : {
     flexDirection: 'row',
