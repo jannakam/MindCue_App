@@ -51,7 +51,8 @@ function DoctorHome({ navigation }) {
                 <Text style={style.dashboardOptions} onPress={() => navigation.navigate('Patient')}>Janna Almuqaisib</Text>
                 <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183, top: 4}} onPress={() => navigation.navigate('Patient')}/>
                 </View>              
-                <View style={style.dashboardContainer}>
+                <View style={{flexDirection:'row', justifyContent: 'left', width:200, gap: 10}}>
+                <Icon name='plus' size={20} color='#DC989A' onPress={() => navigation.navigate('AddPatient')}/>
                 <Text style={style.addPatientButton} onPress={() => navigation.navigate('AddPatient')}>Add a patient</Text>
                 </View>
             </View>

@@ -824,6 +824,11 @@ const style = StyleSheet.create({
     fontFamily: 'Lexend-Regular',
     color: '#638184',
   },
+  addPatientButton : {
+    color: '#DC989A',
+    fontFamily: 'Poppins-Medium',
+    fontSize: 16,
+  },
 });
 
 export default style;
