@@ -52,7 +52,7 @@ function DoctorHome({ navigation }) {
                 <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183, top: 4}} onPress={() => navigation.navigate('Patient')}/>
                 </View>              
                 <View style={style.dashboardContainer}>
-                <Text style={style.dashboardOptions} onPress={() => navigation.navigate('AddPatient')}>Add a patient</Text>
+                <Text style={style.addPatientButton} onPress={() => navigation.navigate('AddPatient')}>Add a patient</Text>
                 </View>
             </View>
         </SafeAreaView>
