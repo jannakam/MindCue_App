@@ -21,7 +21,7 @@ function Patient({ navigation }) {
                <Text></Text>
                <View style={style.button5}>
                <Icon name='phone' size={16} color={'#DC989A'}/>
-               <Text style={{color: '#DC989A', fontFamily: 'Poppins-SemiBold', fontSize: 14}} onPress={() => Linking.openURL(`tel:${phoneNumn}`)}>Call Emergency Contact</Text>
+               <Text style={{color: '#DC989A', fontFamily: 'Poppins-SemiBold', fontSize: 14}} onPress={() => Linking.openURL(`tel:${phoneNum}`)}>Call Emergency Contact</Text>
                </View>
                <View style={style.ECcontainer}>
                <Text style={{color: '#638184', fontFamily: 'Lexend-Bold', fontSize: 14}}>Name:</Text>
