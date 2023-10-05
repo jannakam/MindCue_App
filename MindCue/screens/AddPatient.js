@@ -3,11 +3,12 @@ import {Text, View, SafeAreaView, ImageBackground, Button,StyleSheet, TouchableO
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ActivityIndicator, RadioButton, TextInput } from 'react-native-paper';
-import {Camera} from 'react-native-vision-camera';
+import {Camera,useCameraDevices} from 'react-native-vision-camera';
 import style from '../components/style';
 
 function ScanQrCode() {
-  const devices = Camera.getAvailableCameraDevices();
+  // const devices = Camera.getAvailableCameraDevices();
+  const devices = Camera.useCameraDevices();
   const device = devices.find((d) => d.position === 'back');
   const camera = useRef(null);
   const [imageData, setImageData] = useState('');
