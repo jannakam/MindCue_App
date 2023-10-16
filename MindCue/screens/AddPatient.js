@@ -8,7 +8,7 @@ import style from '../components/style';
 
 function ScanQrCode() {
   // const devices = Camera.getAvailableCameraDevices();
-  const devices = Camera.useCameraDevices();
+  const devices = useCameraDevices();
   const device = devices.find((d) => d.position === 'back');
   const camera = useRef(null);
   const [imageData, setImageData] = useState('');
