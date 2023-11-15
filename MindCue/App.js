@@ -35,7 +35,7 @@ const Stack = createNativeStackNavigator();
 
 // This is the function that is going to list all our screens
 function App() {
-  //const [isSignedIn, setIsSignedIn] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   return (
     // <NavigationContainer>
     // <Stack.Navigator name='HomeScreen' initialRouteName={HomeScreen}>
