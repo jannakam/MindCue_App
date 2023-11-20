@@ -8,30 +8,30 @@ import {Camera , useCameraDevices} from 'react-native-vision-camera'
 import { camelCase } from 'react-native-svg/lib/typescript/xml';
 
 function DoctorHome({ navigation }) {
-    const devices = Camera.getAvailableCameraDevices()
-    const device = devices.find((d) => d.position === 'back')
-    const camera = useRef(null)
+    // const devices = Camera.getAvailableCameraDevices()
+    // const device = devices.find((d) => d.position === 'back')
+    // const camera = useRef(null)
     const [imageData, setImageData] = useState('')
     const [takePhotoClicked,setTakePhotoClicked ]=useState(false)
      
   
-    useEffect(()=>{
-      checkPeermission()
-    },[])
-    const checkPeermission =async()=>{
-      const newcameraPermission = await Camera.requestCameraPermission()
-      const newmicrophonePermission = await Camera.requestMicrophonePermission()
-      console.log(newcameraPermission)
-    }
-    if (device == null) return <ActivityIndicator />
-   const takePicture = async()=>{
-    if(camera!=null){
-      const photo = await camera.current.takePhoto()
-      setImageData(photo.path)
-      setTakePhotoClicked(false)
-  console.log(photo.path)
-    }
-   }
+  //   useEffect(()=>{
+  //     checkPeermission()
+  //   },[])
+  //   const checkPeermission =async()=>{
+  //     const newcameraPermission = await Camera.requestCameraPermission()
+  //     const newmicrophonePermission = await Camera.requestMicrophonePermission()
+  //     console.log(newcameraPermission)
+  //   }
+  //   if (device == null) return <ActivityIndicator />
+  //  const takePicture = async()=>{
+  //   if(camera!=null){
+  //     const photo = await camera.current.takePhoto()
+  //     setImageData(photo.path)
+  //     setTakePhotoClicked(false)
+  // console.log(photo.path)
+  //   }
+  //  }
     return (
         <SafeAreaView>
             <ImageBackground style={style.userCircle} source={require('../assets/images/Ellipse15.png')}/>
