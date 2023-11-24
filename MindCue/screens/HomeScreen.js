@@ -22,10 +22,10 @@ function HomeScreen({ navigation }) {
                 <Text style={style.dashboardOptions} onPress={() => navigation.navigate('ReportScreen')}>Report</Text>
                 <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183, top: 4}} onPress={() => navigation.navigate('ReportScreen')}/>
                 </View>
-                <View style={style.dashboardContainer}>
+                {/* <View style={style.dashboardContainer}>
                 <Text style={style.dashboardOptions} onPress={() => navigation.navigate('QRScreen')}>QR code</Text>
                 <Icon name='arrow-right' size={20} color='#638184' style={{position: 'absolute', marginLeft: 183, top: 4}} onPress={() => navigation.navigate('QRScreen')}/>
-                </View>
+                </View> */}
             </View>
             </View>
         </SafeAreaView>
