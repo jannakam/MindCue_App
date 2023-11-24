@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, SafeAreaView, Button, ImageBackground, Pressable} from 'react-native';
+import { Text, View, SafeAreaView, Button, ImageBackground, Pressable, Alert} from 'react-native';
 import { TextInput, RadioButton } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -15,24 +15,29 @@ function SignUpScreen({ navigation }) {
     const [confirmPassword, setConfirmPassword] = React.useState('');
     const [isDoctor, setIsDoctor] = React.useState(false);
 
-    // const handleSignUp = () => {
-    //   // Email validation regex
-    //   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-  
-    //   if (!name || !email || !password || !confirmPassword) {
-    //     Alert.alert('Error', 'Please fill in all fields.');
-    //   } else if (!emailRegex.test(email)) {
-    //     Alert.alert('Error', 'Please enter a valid email address.');
-    //   } else if (password.length < 8) {
-    //     Alert.alert('Error', 'Password must be at least 8 characters long.');
-    //   } else if (password !== confirmPassword) {
-    //     Alert.alert('Error', 'Passwords do not match.');
-    //   } else {
-    //     // Perform sign-up logic here
-    //     // If successful, navigate to the next screen
-    //     navigation.navigate('UserVerification');
-    //   }
-    // };
+    const handleSignUp = () => {
+      // Email validation regex
+      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+
+      if (!name || !email || !password || !confirmPassword) {
+          Alert.alert('Error', 'Please fill in all fields.');
+      } else if (!emailRegex.test(email)) {
+          Alert.alert('Error', 'Please enter a valid email address.');
+      } else if (password.length < 5) {
+          Alert.alert('Error', 'Password must be at least 5 characters long.');
+      } else if (password !== confirmPassword) {
+          Alert.alert('Error', 'Passwords do not match.');
+      } else {
+          // Perform sign-up logic here
+          // If successful, navigate to the next screen
+          // isDoctor ? navigation.navigate('DoctorVerification') : navigation.navigate('UserVerification');
+          if (checked === 'third') {
+            navigation.navigate('DoctorVerification');
+        } else {
+            navigation.navigate('UserVerification');
+        }
+    };
+  };
 
     return(
     <SafeAreaView>
@@ -58,12 +63,15 @@ function SignUpScreen({ navigation }) {
       onChangeText={(text) => setEmail(text)}/>
 
       <TextInput 
+      secureTextEntry={true}
       style={style.textbox} 
       placeholder='Password' 
       value={password}
       onChangeText={(text) => setPassword(text)}/>
 
-      <TextInput style={style.textbox} 
+      <TextInput 
+      style={style.textbox} 
+      secureTextEntry={true}
       placeholder='Confirm Password' 
       value={confirmPassword}
       onChangeText={(text) => setConfirmPassword(text)}/>
@@ -83,7 +91,7 @@ function SignUpScreen({ navigation }) {
       <Text>I am a licensed mental health professional</Text>
       </View>
       </View>
-      <Text style={style.button2} onPress={() => isDoctor ?  navigation.navigate('DoctorVerification') : navigation.navigate('UserVerification')}>Sign up</Text>
+      <Text style={style.button2} onPress={handleSignUp}>Sign up</Text>
       </View>
     </View>
     </SafeAreaView>
