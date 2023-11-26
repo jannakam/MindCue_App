@@ -34,7 +34,7 @@ function DoctorVerification({ navigation }) {
 
         <View style={style.box5}>
         <View>
-          <Text style={style.userTitle}>Hello User!</Text>
+          <Text style={style.userTitle}>Hello Doctor!</Text>
           <Text style={style.generalText3}>Please enter verification code:</Text>
           <TextInput style={style.numberInput} keyboardType='numeric' onChangeText={text => onChanged(text)} value={number} maxLength={4} />
           <Text style={style.generalText3}>Didn't receive code? <Text style={style.generalText2}>Send again.</Text></Text>
